@@ -35,3 +35,6 @@ jobs:
       - name: validate tf
         run: |
           terraform validate
+      - name: tf plan
+        run: |
+          terraform plan -out=plan.out
