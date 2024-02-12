@@ -17,7 +17,6 @@ terraform {
 
 provider "aws" {
   region  = "ap-southeast-2"
-  profile = "sheepu.admin"
 }
 
 resource "aws_instance" "action_instance" {
