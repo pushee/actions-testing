@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Git clone the repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@v1.7.0
         with:
@@ -35,9 +35,7 @@ jobs:
       - name: where we at
         run: |
           pwd
-          ls -lash
           echo $GITHUB_WORKSPACE
-          cd ../
           ls -lash
       - name: validate tf
         run: |
