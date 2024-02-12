@@ -34,6 +34,9 @@ jobs:
           aws sts get-caller-identity
       - name: where we at
         run: |
+          pwd
+          ls -lash
+          echo $GITHUB_WORKSPACE
           cd $GITHUB_WORKSPACE
           ls -lash
       - name: validate tf
