@@ -32,6 +32,9 @@ jobs:
       - name: Sts GetCallerIdentity
         run: |
           aws sts get-caller-identity
+      - name: where we at
+        run: |
+          ls -lash
       - name: validate tf
         run: |
           terraform validate
