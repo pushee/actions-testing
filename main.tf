@@ -7,19 +7,19 @@ terraform {
   }
 
   backend "s3" {
-    bucket  = "sheepu-tfstate"
-    region  = "ap-southeast-2"
-    key     = "test/actions-testing/terraform.tfstate"
+    bucket = "sheepu-tfstate"
+    region = "ap-southeast-2"
+    key    = "test/actions-testing/terraform.tfstate"
   }
-  
+
   required_version = ">= 1.2.0"
 }
 
 provider "aws" {
-  region  = "ap-southeast-2"
+  region = "ap-southeast-2"
 }
 
 resource "aws_instance" "action_instance" {
-  ami  = "ami-02eec49345a878486" #  AMZN Linux 2
-  instance_type = "t2.micro"     # Free-tier eligible instance type
+  ami           = "ami-02eec49345a878486" #  AMZN Linux 2
+  instance_type = "t2.micro"              # Free-tier eligible instance type
 }
