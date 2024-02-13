@@ -20,8 +20,8 @@ provider "aws" {
 }
 
 resource "aws_instance" "action_instance" {
-  ami           = "ami-02eec49345a878486" #  AMZN Linux 2
-  instance_type = "t2.micro"              # Free-tier eligible instance type
+  ami                  = "ami-02eec49345a878486" #  AMZN Linux 2
+  instance_type        = "t2.micro"              # Free-tier eligible instance type
   iam_instance_profile = "ssm-instance-profile"
   tags = {
     Name = "gh-action-instance"
